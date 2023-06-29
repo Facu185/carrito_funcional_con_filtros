@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.main {
+  display: flex;
+}
+.sidebar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 10%;
+  gap: 1rem;
+}
+.categorias {
+  cursor: pointer;
+}
+.active {
+  color: red;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 1rem;
+}
+
+nav > ul {
+  display: flex;
+}
+
+nav > ul > li {
+  list-style: none;
+  margin: 0 15px;
+}
+.productos {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  gap: 0.4rem;
+  padding: 1rem;
+}
+.items > input {
+  width: 50%;
+  text-align: center;
+  border: 1px solid #2b2b2b;
+  border-radius: 0.25rem;
+}
+img {
+  width: 100%;
+}
+.precio {
+  font-size: 1.5rem;
+}
+.nombre {
+  font-size: 2rem;
+}
+.button--primary {
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border: 1px solid #2b2b2b;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 150ms;
+}
+.button--primary:hover {
+  background-color: #6b6b6b;
+  color: white;
+  border: 1px solid white;
+}
+.carrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.carrito .item {
+  padding: 1rem;
+  gap: 1rem;
+  width: 25%;
+  margin: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #2b2b2b;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.carrito .item img {
+  width: 50%;
+  margin: auto;
+}
