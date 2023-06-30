@@ -4,11 +4,17 @@ export function renderCarrito() {
 
     function showTotal() {
         const total = carrito.reduce((acc, carrito) => acc + (carrito.precio * carrito.cantidad), 0);
+        localStorage.removeItem("carrito");
         swal({
             title: "Comprar",
             text: `Precio total: ${total}`,
             buttons: ["Cancelar", "Comprar"],
           })
+          .then(() => {
+            setTimeout(() => {
+              location.reload();
+            }, 1000);
+          });
     }
 
   function deleteFromCart(id) {
@@ -65,7 +71,7 @@ export function renderCarrito() {
   comprar.textContent = 'comprar'
   comprar.classList.add('button--primary')
 
-  comprar.addEventListener('click', showTotal)
+  comprar.addEventListener('click', showTotal);
 
   carritoContainer.appendChild(comprar)
 
